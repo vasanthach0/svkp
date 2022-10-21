@@ -1,0 +1,49 @@
+<div class="banner">
+    <div class="content">
+
+        <h1 align="center">Fashion is what you’re offered four times a year by<br>
+            designers and style is what you choose
+        </h1>
+        <marquee  direction="left" height="40px">
+            ****Big Diwali Sale is here. Don't Miss Out on Top Festive Offers****
+        </marquee>
+       
+    </div>
+</div>
+<div class="container" mt-6 mb-7>
+        <h1>How to get Traditional and Stylish wear</h1>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="stepBox">
+                    <p>1</p>
+                    <p>Select the item you want</p>
+                </div><br>
+            </div>
+            <div class="col-lg-4">
+                <div class="stepBox">
+                    <p>2</p>
+                    <p>Register with details</p>
+                </div><br>
+            </div>
+            <div class="col-lg-4">
+                <div class="stepBox">
+                    <p>3</p>
+                    <p>Your order will be  delivered on time</p>
+                </div><br>
+            </div>
+        </div>
+</div>
+<div class="container" mt-4 mb-4>
+    <b><h3 class="text">Customers favourite Styles</h3></b>
+        <div class="row">
+            <div class="col-lg-4" *ngFor="let data of allData; index as i">
+                <div class="shopBox" *ngIf="i<=2">
+                    <img src="{{data.Img}}"/>
+                    <h3>{{data.Name}}</h3>
+                    <h3><b>{{data.price | currency:'INR'}}</b></h3>
+                </div>
+            </div>
+        </div>
+        <a routerLink="Menu" class="viewmorebutton">view more</a>
+        
+</div>
