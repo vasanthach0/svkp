@@ -1,0 +1,27 @@
+<div class="container" mt-5 mb-10>
+    <a [routerLink]="['/Menu']" class="btn btn-dark">Back</a>
+    <form  class="col-lg-6" #registerForm="ngForm" (ngSubmit)="register(registerForm)">
+        <h1>Enter your Details</h1>
+        <label for="name"> Name:</label>
+        <input type="text"  #name (ngModel)="name"  name="name" id="name" class="form-control" placeholder="enter your name">
+      
+        <label for="mobileNumber"> Mobile Number</label>
+        <input type="text"  #mobileNumber (ngModel)="mobileNumber" name="mobileNumber" id="mobileNumber" class="form-control" placeholder="enter your mobileNumber">
+
+        <label for="emailId"> Email Id</label>
+        <input type="text" #emailId (ngModel)="emailId" name="emailId" id="emailId" class="form-control" placeholder="enter your  email id">
+
+        <label for="address"> Address:</label>
+        <input type="text"  #address (ngModel)="address"  name="address" id="address" class="form-control" placeholder="enter your address"><br><br>
+             
+        <!-- <input type="submit" (click)="open()" value="PlaceOrder" class="btn btn-primary w-100"> -->
+       <button type="submit" (click)="open()" class="btn btn-primary w-100">PlaceOrder</button> 
+    </form>
+    <br><br>
+    <div *ngIf="message" class="alert alert-success alert-dismissible fade show" role="alert">
+      <h2>      Thank You!</h2>
+      <h3>Successfully Registered</h3>
+        
+      <!-- <button  type="button" data-bs-dismiss="alert" aria-label="Close"></button> -->
+    </div>
+</div>

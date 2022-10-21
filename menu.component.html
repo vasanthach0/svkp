@@ -1,0 +1,15 @@
+<div class="container" mt-4 mb-4>
+    <b><h3 class="text">Customers favourite Styles</h3></b>
+    <div class="row">
+        <div class="col-lg-4" *ngFor="let data of allData">
+            <div class="shopBox">
+                        <img src="{{data.Img}}"/>
+                        <h1>{{data.Name}}</h1>
+                        <h4>{{data.Fabric}}</h4>
+                        <h3><b>{{data.price | currency:'INR'}}</b></h3>
+                        <button type="button" [routerLink]="['/Login']">Buy now</button>
+            </div>
+        </div>
+    </div>
+        
+</div>
